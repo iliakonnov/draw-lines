@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{5630BFDE-D420-4804-9E9B-A7106DEF7C8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>gui</RootNamespace>
+    <AssemblyName>gui</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Eto">
+      <HintPath>..\packages\Eto.Forms.2.3.0\lib\net45\Eto.dll</HintPath>
+    </Reference>
+    <Reference Include="Eto.Gtk2">
+      <HintPath>..\packages\Eto.Platform.Gtk.2.3.0\lib\net45\Eto.Gtk2.dll</HintPath>
+    </Reference>
+    <Reference Include="Eto.XamMac2">
+      <HintPath>..\packages\Eto.Platform.XamMac2.2.3.0\lib\net45\Eto.XamMac2.dll</HintPath>
+    </Reference>
+    <Reference Include="Eto.WinForms">
+      <HintPath>..\packages\Eto.Platform.Windows.2.3.0\lib\net45\Eto.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="SharpDX">
+      <HintPath>..\packages\SharpDX.3.1.1\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI">
+      <HintPath>..\packages\SharpDX.DXGI.3.1.1\lib\net45\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct2D1">
+      <HintPath>..\packages\SharpDX.Direct2D1.3.1.1\lib\net45\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="PluginTemplate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="SearchPlugins.cs" />
+    <Compile Include="ImageDialog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="res\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\resized-light.png" />
+    <EmbeddedResource Include="res\resized-dark.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

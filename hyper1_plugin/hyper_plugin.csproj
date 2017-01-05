@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{167D60FE-CA98-4957-9D6B-2BB1D1607711}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>hyper1_plugin</RootNamespace>
+    <AssemblyName>hyper1_plugin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\gui\bin\Debug\plugins</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>..\gui\bin\Release\plugins</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="hyper_plugin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gui\gui.csproj">
+      <Project>{5630BFDE-D420-4804-9E9B-A7106DEF7C8D}</Project>
+      <Name>gui</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Eto">
+      <HintPath>..\packages\Eto.Forms.2.3.0\lib\net45\Eto.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hyper_plugin", "hyper1_plug
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypercircle_plugin", "Hypercircle1_plugin\Hypercircle_plugin.csproj", "{9F3CCB44-84FE-4DB8-B90E-EED1AAC355EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLI", "CLI\CLI.csproj", "{DB4F129F-D051-4DCE-9389-D902731F9EEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin", "PluginInterfaces\Plugin.csproj", "{EBDC6F57-15C2-4457-ACC5-F5A955475C4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -31,6 +35,14 @@ Global
 		{9F3CCB44-84FE-4DB8-B90E-EED1AAC355EF}.Debug|x86.Build.0 = Debug|x86
 		{9F3CCB44-84FE-4DB8-B90E-EED1AAC355EF}.Release|x86.ActiveCfg = Release|x86
 		{9F3CCB44-84FE-4DB8-B90E-EED1AAC355EF}.Release|x86.Build.0 = Release|x86
+		{DB4F129F-D051-4DCE-9389-D902731F9EEA}.Debug|x86.ActiveCfg = Debug|x86
+		{DB4F129F-D051-4DCE-9389-D902731F9EEA}.Debug|x86.Build.0 = Debug|x86
+		{DB4F129F-D051-4DCE-9389-D902731F9EEA}.Release|x86.ActiveCfg = Release|x86
+		{DB4F129F-D051-4DCE-9389-D902731F9EEA}.Release|x86.Build.0 = Release|x86
+		{EBDC6F57-15C2-4457-ACC5-F5A955475C4C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EBDC6F57-15C2-4457-ACC5-F5A955475C4C}.Debug|x86.Build.0 = Debug|Any CPU
+		{EBDC6F57-15C2-4457-ACC5-F5A955475C4C}.Release|x86.ActiveCfg = Release|Any CPU
+		{EBDC6F57-15C2-4457-ACC5-F5A955475C4C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0

@@ -13,7 +13,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\gui\bin\Debug\plugins\</OutputPath>
+    <OutputPath>..\bin\Debug\plugins</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -21,7 +21,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <Optimize>true</Optimize>
-    <OutputPath>..\gui\bin\Release\plugins\</OutputPath>
+    <OutputPath>..\bin\Release\plugins</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
@@ -39,10 +39,9 @@
     <Compile Include="connectAll.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\gui\gui.csproj">
-      <Project>{5630BFDE-D420-4804-9E9B-A7106DEF7C8D}</Project>
-      <Name>gui</Name>
-      <Private>False</Private>
+    <ProjectReference Include="..\PluginInterfaces\Plugin.csproj">
+      <Project>{EBDC6F57-15C2-4457-ACC5-F5A955475C4C}</Project>
+      <Name>Plugin</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

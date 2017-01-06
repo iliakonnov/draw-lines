@@ -13,7 +13,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
+    <OutputPath>..\bin\Debug\gui</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -21,7 +21,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>..\bin\Release\gui</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
@@ -40,24 +40,13 @@
       <HintPath>..\packages\Eto.Platform.Windows.2.3.0\lib\net45\Eto.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="SharpDX">
-      <HintPath>..\packages\SharpDX.3.1.1\lib\net45\SharpDX.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX.DXGI">
-      <HintPath>..\packages\SharpDX.DXGI.3.1.1\lib\net45\SharpDX.DXGI.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX.Direct2D1">
-      <HintPath>..\packages\SharpDX.Direct2D1.3.1.1\lib\net45\SharpDX.Direct2D1.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="PluginTemplate.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainForm.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="SearchPlugins.cs" />
     <Compile Include="ImageDialog.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +55,12 @@
   <ItemGroup>
     <EmbeddedResource Include="res\resized-light.png" />
     <EmbeddedResource Include="res\resized-dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PluginInterfaces\Plugin.csproj">
+      <Project>{EBDC6F57-15C2-4457-ACC5-F5A955475C4C}</Project>
+      <Name>Plugin</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

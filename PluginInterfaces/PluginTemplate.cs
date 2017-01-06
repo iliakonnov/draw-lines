@@ -1,5 +1,6 @@
 ﻿using gui;
 using Eto.Drawing;
+using PluginInterfaces;
 
 namespace TemplateName_plugin
 {

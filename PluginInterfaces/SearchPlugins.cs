@@ -3,25 +3,14 @@ using System.Linq;
 using System.IO;
 using System.Reflection;
 using System.Collections.Generic;
-using Eto.Drawing;
+using PluginInterfaces;
 
 
-namespace gui
+namespace PluginSearch
 {
 	public static class SearchPlugins
 	{
-		public interface IGenerator
-		{
-			Bitmap Generate(int distance, int n, Color fgColor, Color bgColor);
-		}
-
-		public interface IPlugin
-		{
-			string Name { get; }
-			IGenerator GetGenerator();
-		}
-
-		public static void Search(MainForm form, string path = "plugins/")
+		public static Dictionary<string, IPlugin> Search(string path = "plugins/")
 		{
 			// https://code.msdn.microsoft.com/windowsdesktop/Creating-a-simple-plugin-b6174b62
 			string[] dllFileNames = null;
@@ -84,7 +73,7 @@ namespace gui
 				pluginNames.Add(name, p);
 			}
 
-			form.plugins = pluginNames;
+			return pluginNames;
 		}
 	}
 }

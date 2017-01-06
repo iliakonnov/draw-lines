@@ -1,19 +1,19 @@
 ﻿using System;
-using gui;
+using PluginInterfaces;
 using Eto.Drawing;
 
 namespace Hypercircle_plugin
 {
-	public class Hypercircle_Plugin : SearchPlugins.IPlugin
+	public class Hypercircle_Plugin : IPlugin
 	{
 		public string Name { get { return "Hypercircle"; } }
-		public SearchPlugins.IGenerator GetGenerator()
+		public IGenerator GetGenerator()
 		{
 			return new Hypercircle_Generator();
 		}
 	}
 
-	public class Hypercircle_Generator : SearchPlugins.IGenerator
+	public class Hypercircle_Generator : IGenerator
 	{
 		public Bitmap Generate(int distance, int n, Color fgColor, Color bgColor)
 		{

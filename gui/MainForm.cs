@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 using Eto.Forms;
 using Eto.Drawing;
+using PluginInterfaces;
 
 namespace gui
 {
@@ -16,8 +16,8 @@ namespace gui
 		Button generate_btn;
 		ComboBox plugins_combobox;
 		ProgressBar loading_PBar;
-		Dictionary<string, SearchPlugins.IPlugin> _plugins;
-		public Dictionary<string, SearchPlugins.IPlugin> plugins
+		Dictionary<string, IPlugin> _plugins;
+		public Dictionary<string, IPlugin> plugins
 		{
 			get 
 			{
@@ -26,7 +26,7 @@ namespace gui
 			set
 			{
 				_plugins = value;
-				foreach (KeyValuePair<string, SearchPlugins.IPlugin> pair in value)
+				foreach (KeyValuePair<string, IPlugin> pair in value)
 				{
 					AddPlugin(pair.Key);
 				}

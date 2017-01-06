@@ -3,43 +3,58 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{167D60FE-CA98-4957-9D6B-2BB1D1607711}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>hyper1_plugin</RootNamespace>
-    <AssemblyName>hyper1_plugin</AssemblyName>
+    <ProjectGuid>{DB4F129F-D051-4DCE-9389-D902731F9EEA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CLI</RootNamespace>
+    <AssemblyName>CLI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\bin\Debug\plugins</OutputPath>
+    <OutputPath>..\bin\Debug\CLI</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <Optimize>true</Optimize>
-    <OutputPath>..\bin\Release\plugins</OutputPath>
+    <OutputPath>..\bin\Release\CLI</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="hyper_plugin.cs" />
+    <Reference Include="System" />
+    <Reference Include="Eto">
+      <HintPath>..\packages\Eto.Forms.2.3.0\lib\net45\Eto.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Options">
+      <HintPath>..\packages\Mono.Options.4.4.0.0\lib\net4-client\Mono.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Eto.Gtk2">
+      <HintPath>..\packages\Eto.Platform.Gtk.2.3.0\lib\net45\Eto.Gtk2.dll</HintPath>
+    </Reference>
+    <Reference Include="Eto.WinForms">
+      <HintPath>..\packages\Eto.Platform.Windows.2.3.0\lib\net45\Eto.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Eto.XamMac">
+      <HintPath>..\packages\Eto.Platform.XamMac.2.3.0\lib\net45\Eto.XamMac.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PluginInterfaces\Plugin.csproj">
       <Project>{EBDC6F57-15C2-4457-ACC5-F5A955475C4C}</Project>
       <Name>Plugin</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Eto">
-      <HintPath>..\packages\Eto.Forms.2.3.0\lib\net45\Eto.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

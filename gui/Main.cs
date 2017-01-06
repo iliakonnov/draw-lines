@@ -1,6 +1,7 @@
 ﻿using System;
 using Eto.Forms;
 using Eto.Drawing;
+using PluginSearch;
 
 namespace gui
 {
@@ -31,7 +32,10 @@ namespace gui
 				GetManifestResourceStream("gui.res.resized-dark.png")
 			);
 			// Load plugins
-			SearchPlugins.Search(form);
+			var plugins = SearchPlugins.Search(
+				String.Format("..{0}plugins{0}", System.IO.Path.DirectorySeparatorChar)
+			);
+			form.plugins = plugins;
 
 			application.Run(form);
 		}

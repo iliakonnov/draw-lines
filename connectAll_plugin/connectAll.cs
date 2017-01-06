@@ -1,18 +1,18 @@
-﻿using gui;
+﻿using PluginInterfaces;
 using Eto.Drawing;
 
 namespace connectAll_plugin
 {
-	public class ConnectAll_Plugin : SearchPlugins.IPlugin
+	public class ConnectAll_Plugin : IPlugin
 	{
-		public string Name { get { return "connect all"; } }
-		public SearchPlugins.IGenerator GetGenerator()
+		public string Name { get { return "connect_all"; } }
+		public IGenerator GetGenerator()
 		{
 			return new ConnectAll_Generator();
 		}
 	}
 
-	class ConnectAll_Generator : SearchPlugins.IGenerator
+	class ConnectAll_Generator : IGenerator
 	{
 		Point[] _GetPositions(int distance, int n)
 		{

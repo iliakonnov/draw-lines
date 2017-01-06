@@ -1,18 +1,18 @@
-﻿using gui;
-using Eto.Drawing;
+﻿using Eto.Drawing;
+using PluginInterfaces;
 
 namespace hyper_plugin
 {
-	public class Hyper_Plugin : SearchPlugins.IPlugin
+	public class Hyper_Plugin : IPlugin
 	{
 		public string Name { get { return "Hyper"; } }
-		public SearchPlugins.IGenerator GetGenerator()
+		public IGenerator GetGenerator()
 		{
 			return new Hyper_Generator();
 		}
 	}
 
-	public class Hyper_Generator : SearchPlugins.IGenerator
+	public class Hyper_Generator : IGenerator
 	{
 		public Bitmap Generate(int distance, int n, Color fgColor, Color bgColor)
 		{

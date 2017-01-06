@@ -59,9 +59,7 @@ namespace CLI
 		}
 		public static void Main(string[] args)
 		{
-			plugins = SearchPlugins.Search(
-				string.Format("..{0}plugins{0}", System.IO.Path.DirectorySeparatorChar)
-			);
+			plugins = SearchPlugins.Search("plugins");
 
 			string plugin = null;
 			int distance = 100;

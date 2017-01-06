@@ -10,7 +10,7 @@ namespace PluginSearch
 {
 	public static class SearchPlugins
 	{
-		public static Dictionary<string, IPlugin> Search(string path = "plugins/")
+		public static Dictionary<string, IPlugin> Search(string path)
 		{
 			// https://code.msdn.microsoft.com/windowsdesktop/Creating-a-simple-plugin-b6174b62
 			string[] dllFileNames = null;

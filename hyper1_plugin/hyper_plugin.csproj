@@ -33,6 +33,7 @@
     <ProjectReference Include="..\PluginInterfaces\Plugin.csproj">
       <Project>{EBDC6F57-15C2-4457-ACC5-F5A955475C4C}</Project>
       <Name>Plugin</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

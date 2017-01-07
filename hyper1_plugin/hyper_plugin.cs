@@ -16,7 +16,7 @@ namespace hyper_plugin
 	{
 		public Bitmap Generate(int distance, int n, Color fgColor, Color bgColor)
 		{
-			var image = new Bitmap(distance * n, distance * n, PixelFormat.Format32bppRgb);
+			var image = new Bitmap(distance * n, distance * n, PixelFormat.Format24bppRgb);
 			using (Graphics canvas = new Graphics(image))
 			{
 				canvas.Clear(bgColor);

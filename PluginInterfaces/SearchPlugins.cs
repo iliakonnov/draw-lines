@@ -58,8 +58,6 @@ namespace PluginSearch
 				plugins.Add(plugin);
 			}
 
-			//
-
 			var pluginNames = new Dictionary<string, IPlugin>();
 			string name;
 			var nameSuffix = 1;

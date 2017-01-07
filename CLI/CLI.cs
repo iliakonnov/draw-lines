@@ -16,7 +16,9 @@ namespace CLI
 							 string output)
 		{
 			Console.WriteLine("Working...");
-			var application = new Eto.Forms.Application();
+			#pragma warning disable 0219
+			var application = new Eto.Forms.Application();  // Application must be created for Eto.Drawing
+			#pragma warning restore 0219
 			var bgColor = Color.FromRgb(int.Parse(bgColorString, System.Globalization.NumberStyles.HexNumber));
 			var fgColor = Color.FromRgb(int.Parse(fgColorString, System.Globalization.NumberStyles.HexNumber));
 			var img = plugins[plugin].GetGenerator().Generate(distance, n, fgColor, bgColor);

@@ -17,8 +17,8 @@ namespace Hypercircle_plugin
 	{
 		public Bitmap Generate(int distance, int n, Color fgColor, Color bgColor)
 		{
-			int size = Convert.ToInt32(Convert.ToDouble(distance) * (Convert.ToDouble(n) - 2.5));
-			var image = new Bitmap(size, size, PixelFormat.Format32bppRgb);
+			int size = Convert.ToInt32(Convert.ToDouble(distance) * (Convert.ToDouble(n) - 2.5)); // Looks more circle
+			var image = new Bitmap(size, size, PixelFormat.Format24bppRgb);
 			using (Graphics canvas = new Graphics(image))
 			{
 				canvas.Clear(bgColor);
@@ -27,7 +27,7 @@ namespace Hypercircle_plugin
 				n /= 2;
 				int offset = distance / 2;
 				int bigOffset = distance * (n - 1);
-				int minus = 2 * offset;
+				int minus = 2 * offset; // Looks more circle
 				int step;
 
 				// Up left

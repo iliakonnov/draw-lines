@@ -49,6 +49,7 @@ __Генерирует звёздочку (*)__
 
 ## "Cell"
 __Генерирует простую сетку__
+
 ![Preview](https://github.com/iliakonnov/draw-lines/raw/master/demo/Cell/30-10.png)
 
 Примеры:
@@ -59,6 +60,7 @@ __Генерирует простую сетку__
 
 ## "DiagCell"
 __Генерирует диагональную сетку__
+
 ![Preview](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/30-10.png)
 
 Примеры:

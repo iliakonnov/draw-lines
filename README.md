@@ -45,22 +45,24 @@ __Генерирует звёздочку (*)__
 Примеры:
   1. d=40, n=8, fgColor=#0000FF, bgColor=#000000 [Demo (320x320)](https://github.com/iliakonnov/draw-lines/raw/master/demo/Star/40-8.png)
   2. d=60, n=12, fgColor=#0000FF, bgColor=#000000 [Demo (720x720)](https://github.com/iliakonnov/draw-lines/raw/master/demo/Star/60-12.png)
-  2. d=80, n=16, fgColor=#0000FF, bgColor=#000000 [Demo (1280x1280)](https://github.com/iliakonnov/draw-lines/raw/master/demo/Star/60-12.png)
+  3. d=80, n=16, fgColor=#0000FF, bgColor=#000000 [Demo (1280x1280)](https://github.com/iliakonnov/draw-lines/raw/master/demo/Star/60-12.png)
 
 ## "Cell"
 __Генерирует простую сетку__
-![Preview](https://github.com/iliakonnov/draw-lines/raw/master/demo/Cell/50-10.png)
+![Preview](https://github.com/iliakonnov/draw-lines/raw/master/demo/Cell/30-10.png)
 
 Примеры:
+  1. d=30, n=10, fgColor=#0000FF, bgColor=#000000 [Demo (300x300)](https://github.com/iliakonnov/draw-lines/raw/master/demo/Cell/30-10.png)
   1. d=50, n=10, fgColor=#0000FF, bgColor=#000000 [Demo (500x500)](https://github.com/iliakonnov/draw-lines/raw/master/demo/Cell/50-10.png)
   2. d=75, n=15, fgColor=#0000FF, bgColor=#000000 [Demo (1125x1125)](https://github.com/iliakonnov/draw-lines/raw/master/demo/Cell/75-15.png)
-  2. d=100, n=20, fgColor=#0000FF, bgColor=#000000 [Demo (2000x2000)](https://github.com/iliakonnov/draw-lines/raw/master/demo/Cell/100-20.png)
+  3. d=100, n=20, fgColor=#0000FF, bgColor=#000000 [Demo (2000x2000)](https://github.com/iliakonnov/draw-lines/raw/master/demo/Cell/100-20.png)
 
 ## "DiagCell"
 __Генерирует диагональную сетку__
-![Preview](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/50-10.png)
+![Preview](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/30-10.png)
 
 Примеры:
-  1. d=50, n=10, fgColor=#0000FF, bgColor=#000000 [Demo (500x500)](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/50-10.png)
-  2. d=75, n=15, fgColor=#0000FF, bgColor=#000000 [Demo (1125x1125)](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/75-15.png)
-  2. d=100, n=20, fgColor=#0000FF, bgColor=#000000 [Demo (2000x2000)](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/100-20.png)
+  1. d=30, n=10, fgColor=#0000FF, bgColor=#000000 [Demo (300x300)](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/30-10.png)
+  2. d=50, n=10, fgColor=#0000FF, bgColor=#000000 [Demo (500x500)](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/50-10.png)
+  3. d=75, n=15, fgColor=#0000FF, bgColor=#000000 [Demo (1125x1125)](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/75-15.png)
+  4. d=100, n=20, fgColor=#0000FF, bgColor=#000000 [Demo (2000x2000)](https://github.com/iliakonnov/draw-lines/raw/master/demo/diagCell/100-20.png)
